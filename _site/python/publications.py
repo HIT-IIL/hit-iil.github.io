@@ -42,10 +42,10 @@ tab = """
                <div class="navbar-inner">
                   <div class="container">
                      <ul class="nav">
-                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="people.html">People</a></li>
 <!--                        <li><a href="research.html">Research</a></li>-->
-                        <li><a href="publications.html">Publications</a></li>
+                        <li class="active"><a href="publications.html">Publications</a></li>
 <!--                        <li><a href="gallery.html">Gallery</a></li>-->
                         <li><a href="news.html">News</a></li>
 <!--                        <li><a href="teaching.html">Teaching</a></li>-->
@@ -70,8 +70,8 @@ index_public = """
 """
 for time in paper_times:
     html += index_public.format(time)
-    
-    
+
+
 project_head = """
               <li><a href="#refereed"> 项目和基金</a></li>
 """
@@ -183,7 +183,8 @@ for time in project_times:
     whole_project_time += project_time.format(time, tmp_project)
 html += (project_selection.format(whole_project_time))
 
-end ="""
+end = """
+      <div class="container">
       <footer id="footer">
          <div class="container-fluid">
             <div class="row-fluid">
@@ -204,6 +205,7 @@ end ="""
             </div>
          </div>
       </footer>
+      </div>
 
       <!-- Javascript files -->
       <script src="js/jquery-1.9.1.min.js"></script>

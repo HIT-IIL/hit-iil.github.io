@@ -44,12 +44,12 @@ tab = """
                <div class="navbar-inner">
                   <div class="container">
                      <ul class="nav">
-                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="people.html">People</a></li>
 <!--                        <li><a href="research.html">Research</a></li>-->
                         <li><a href="publications.html">Publications</a></li>
 <!--                        <li><a href="gallery.html">Gallery</a></li>-->
-                        <li><a href="news.html">News</a></li>
+                        <li class="active"><a href="news.html">News</a></li>
 <!--                        <li><a href="teaching.html">Teaching</a></li>-->
 <!--                        <li><a href="contact.html">Contact</a></li>-->
                      </ul>
@@ -113,8 +113,9 @@ for key, value in data.items():
 html += (news_start + tmp + news_end)
 
 end = """
-  </div>
+         </div>
       </div>
+      <div class="container">
       <footer id="footer">
          <div class="container-fluid">
             <div class="row-fluid">
@@ -135,6 +136,7 @@ end = """
             </div>
          </div>
       </footer>
+      </div>
 
       <!-- Javascript files -->
       <script src="js/jquery-1.9.1.min.js"></script>

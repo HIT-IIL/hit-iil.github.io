@@ -169,7 +169,8 @@ end = """
             </div>
          </div>
       </div>
-     <footer id="footer">
+      <div class="container">
+      <footer id="footer">
          <div class="container-fluid">
             <div class="row-fluid">
                <div class="span5">
@@ -189,6 +190,7 @@ end = """
             </div>
          </div>
       </footer>
+      </div>
 
       <!-- Javascript files -->
       <script src="js/jquery-1.9.1.min.js"></script>
