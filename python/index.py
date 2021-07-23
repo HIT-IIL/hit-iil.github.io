@@ -98,7 +98,8 @@ for key, value in item.items():
     html += flu_img
 
 div_1 = """
-         <a class="left carousel-control" href="#main-carousel" data-slide="prev">‹</a>
+                  </div>
+                  <a class="left carousel-control" href="#main-carousel" data-slide="prev">‹</a>
                   <a class="right carousel-control" href="#main-carousel" data-slide="next">›</a>
                </div>
             </div>
