@@ -70,7 +70,7 @@ pic_path = item['pic_path']
 print(pic_content, pic_path)
 active_flu_img = """
                      <div class="item active">
-                        <img src="{0}" class="carousel-image" alt="">                      
+                        <img src="{0}" class="carousel-image" alt="">
                         <div class="carousel-caption">
                            <h4>{1}</h4>
                            <!-- -->
@@ -121,48 +121,48 @@ index_main_tab = """
 """.format(intro)
 html += index_main_tab
 
-#生成消息
-item = data[data['type'] == 'news'].reset_index(drop=True).T.to_dict()
+# #生成消息
+# item = data[data['type'] == 'news'].reset_index(drop=True).T.to_dict()
 
-if len(item.keys()) > 0:
-    html += """
-               <div class="row-fluid">
-                  <hr>
-                  <h2 class="centered">最新消息</h2>
-                  <hr>
-               </div>
-    """
+# if len(item.keys()) > 0:
+#     html += """
+#                <div class="row-fluid">
+#                   <hr>
+#                   <h2 class="centered">最新消息</h2>
+#                   <hr>
+#                </div>
+#     """
 
-for key, value in item.items():
-    title = value['title']
-    content = value['content']
-    pic_path = value['pic_path']
-    time = value['time']
-    url = value['url']
-    print(title, content, pic_path, time, url)
-    news = """
-        <div class="span4 feature-item">
-                  <h5> <span class="date"> {0} </span> </h5>
-                  <h4 class="feature-heading">
-                     <a href="{1}">
-                     {2}
-                     </a>
-                     <br/>
-                  </h4>
-                  <hr>
-                  <div class="centered">
-                     <a href="{1}">
-                     <img src="{3}" alt=""></a>
-                  </div>
-                  <hr>
-                  <p>
-                     {4} <a href="{1}">here</a>.
-                  </p>
-                  <br/>
-                  <br/>
-               </div>
-    """.format(time, url, title, pic_path, content)
-    html += news
+# for key, value in item.items():
+#     title = value['title']
+#     content = value['content']
+#     pic_path = value['pic_path']
+#     time = value['time']
+#     url = value['url']
+#     print(title, content, pic_path, time, url)
+#     news = """
+#         <div class="span4 feature-item">
+#                   <h5> <span class="date"> {0} </span> </h5>
+#                   <h4 class="feature-heading">
+#                      <a href="{1}">
+#                      {2}
+#                      </a>
+#                      <br/>
+#                   </h4>
+#                   <hr>
+#                   <div class="centered">
+#                      <a href="{1}">
+#                      <img src="{3}" alt=""></a>
+#                   </div>
+#                   <hr>
+#                   <p>
+#                      {4} <a href="{1}">here</a>.
+#                   </p>
+#                   <br/>
+#                   <br/>
+#                </div>
+#     """.format(time, url, title, pic_path, content)
+#     html += news
 
 end = """
             </div>
